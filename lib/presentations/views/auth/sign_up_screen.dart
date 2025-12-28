@@ -85,9 +85,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-            colors: AppColors.secondaryGradient,
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: AppColors.primaryGradient,
           ),
         ),
         child: SafeArea(
@@ -150,7 +150,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         child: const Icon(
           Icons.person_add_rounded,
           size: 56,
-          color: AppColors.secondary,
+          color: AppColors.primary,
         ),
       ),
     );
@@ -286,7 +286,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   text: 'Create Account',
                   onPressed: isLoading ? null : _handleSignUp,
                   isLoading: isLoading,
-                  backgroundColor: AppColors.secondary,
                 ),
               ],
             ),
@@ -309,7 +308,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 : (value) {
                     setState(() => _agreeToTerms = value ?? false);
                   },
-            activeColor: AppColors.secondary,
+            activeColor: AppColors.primary,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(4),
             ),
@@ -334,7 +333,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   'Terms & Conditions',
                   style: TextStyle(
                     fontSize: 14,
-                    color: AppColors.secondary,
+                    color: AppColors.primary,
                     fontWeight: FontWeight.w600,
                     decoration: TextDecoration.underline,
                   ),
@@ -355,7 +354,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   'Privacy Policy',
                   style: TextStyle(
                     fontSize: 14,
-                    color: AppColors.secondary,
+                    color: AppColors.primary,
                     fontWeight: FontWeight.w600,
                     decoration: TextDecoration.underline,
                   ),
