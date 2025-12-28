@@ -17,7 +17,9 @@ class MerchantPaymentApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => AuthViewModel()),
-        ChangeNotifierProvider(create: (_) => DashboardViewModel()),
+        ChangeNotifierProvider(
+          create: (_) => DashboardViewModel()..loadDashboard(),
+        ),
       ],
       child: MaterialApp(
         title: 'Merchant Payment Tracker',
